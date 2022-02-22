@@ -38,6 +38,9 @@ The following tools were used in the construction of the project:
 
 - [ ] Add preview and link of my projects.
 - [ ] Responsivity.
+- [x] Anchor links in the singe page.
+- [x] Scroll smooth.
+- [ ] Button to download resume.
 
  ##  Preview of Project
 
