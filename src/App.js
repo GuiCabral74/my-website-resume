@@ -1,9 +1,16 @@
+import Nav from "./components/nav";
+import Home from "./components/home";
+import Projects from "./components/projects";
+import { GlobalStyle } from "./components/style/styles";
 
 function App() {
   return (
-    <div>
-      <h1>Meu site em construção</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Nav />
+      <Home />
+      <Projects />
+    </>
   );
 }
 
