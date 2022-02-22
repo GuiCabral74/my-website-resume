@@ -1,7 +1,8 @@
+import { GlobalStyle } from "./components/style/styles";
 import Nav from "./components/nav";
 import Home from "./components/home";
 import Projects from "./components/projects";
-import { GlobalStyle } from "./components/style/styles";
+import Abilities from "./components/abilities";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Nav />
       <Home />
       <Projects />
+      <Abilities />
     </>
   );
 }

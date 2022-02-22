@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    padding-bottom: 7.5rem;
+    box-sizing: border-box;
     background: #2D2E2E;
     font-family: 'Source Code Pro', monospace;
     color: #fff;
@@ -48,21 +50,29 @@ export const BtnResume = styled.button`
 /** NAV */
 
 export const ContainerNav = styled.nav`
-  margin-top: 2rem;
+  padding-top: 2rem;
+  margin: 0 -2rem;
   display: flex;
   justify-content: space-between;
   font-size: 1.125rem;
+  position: fixed;
+  top: 0;
+  height: 3.438rem;
+  width: 100vw;
+  background: #2D2E2E;
+
 `
 
 export const MyName = styled.span`
   font-weight: 500;
+  margin: 0 2rem;
 `
 
 export const NavList = styled.ul`
   display: flex;
   justify-content: space-between;
   list-style: none;
-  margin: 0;
+  margin: 0 2rem;
   padding: 0;
 `
 
@@ -74,6 +84,9 @@ export const ListItem = styled.li`
 export const LinkNav = styled.a`
   text-decoration: none;
   color: #fff;
+  &:hover{
+    color: #E0A80D;
+  }
 `
 
 /** PROJECTS */
@@ -112,4 +125,43 @@ export const ProjectDescription = styled.p`
 export const SeeProject = styled.a`
   font-size: 1.125rem;
   font-weight: 700;
+`
+
+/** Abilities */
+
+export const ContainerAbilities = styled.section`
+  background: #3C3E3E;
+  text-align: center;
+  margin: 0 -2rem ;
+`
+
+export const TitleAbilities = styled.h1`
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 5rem 0;
+`
+
+export const ContainerTechnologies = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+`
+
+export const Technology = styled.div`
+  width: 13rem;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.375rem 2.5rem;
+`
+
+export const TechnologyName = styled.p`
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
 `

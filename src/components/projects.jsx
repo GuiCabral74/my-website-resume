@@ -2,7 +2,7 @@ import { ContainerProjects, ProjectTitle, DivProject, ProjectName, ProjectDescri
 
 function Projects () {
   return(
-    <ContainerProjects>
+    <ContainerProjects id='projects'>
       <ProjectTitle>Projetos</ProjectTitle>
       <DivProject>
         <ProjectName>Nome do projeto</ProjectName>

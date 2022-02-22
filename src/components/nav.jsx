@@ -1,17 +1,56 @@
-import { ContainerNav, MyName, NavList, ListItem, LinkNav } from "./style/styles";
+import {
+  ContainerNav,
+  MyName,
+  NavList,
+  ListItem,
+  LinkNav,
+} from "./style/styles";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-function Nav () {
-  return(
+function Nav() {
+  return (
     <ContainerNav>
       <MyName>GUILHERME CABRAL</MyName>
       <NavList>
-        <LinkNav href="#"><ListItem>Apresentação</ListItem></LinkNav>
-        <LinkNav href="#"><ListItem>Projetos</ListItem></LinkNav>
-        <LinkNav href="#"><ListItem>Habilidades</ListItem></LinkNav>
-        <LinkNav href="#"><ListItem>Contato</ListItem></LinkNav>
+        <AnchorLink
+          style={{ textDecoration: "none" }}
+          offset="120"
+          href="#home"
+        >
+          <LinkNav>
+            <ListItem>Apresentação</ListItem>
+          </LinkNav>
+        </AnchorLink>
+        <AnchorLink
+          style={{ textDecoration: "none" }}
+          offset="120"
+          href="#projects"
+        >
+          <LinkNav>
+            <ListItem>Projetos</ListItem>
+          </LinkNav>
+        </AnchorLink>
+        <AnchorLink
+          style={{ textDecoration: "none" }}
+          offset="120"
+          href="#abilities"
+        >
+          <LinkNav>
+            <ListItem>Habilidades</ListItem>
+          </LinkNav>
+        </AnchorLink>
+        <AnchorLink
+          style={{ textDecoration: "none" }}
+          offset="120"
+          href="#contato"
+        >
+          <LinkNav>
+            <ListItem>Contato</ListItem>
+          </LinkNav>
+        </AnchorLink>
       </NavList>
     </ContainerNav>
-  )
+  );
 }
 
 export default Nav;
