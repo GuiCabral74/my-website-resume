@@ -1,6 +1,7 @@
-import { Title, SubTitle, BtnResume } from "./style/styles";
+import { Title, SubTitle, ContactIcon, BtnResume } from "./style/styles";
 import SvgLinkedin from "./images/svgs/linkedin.svg";
 import SvgGithub from "./images/svgs/github.svg";
+import Cv from "./myResume/Guilherme Cabral.pdf"
 
 function home() {
   return (
@@ -9,15 +10,15 @@ function home() {
         Olá, eu sou o<br /> Guilherme Cabral!
       </Title>
       <SubTitle>Desenvolvedor Front-End</SubTitle>
-      <div>
-        <a style={{"marginRight":"24px"}} target="_blank" href="https://www.linkedin.com/in/guilherme-rodrigues-cabral/">
-          <img src={SvgLinkedin} />
+      <div style={{"marginBottom":"64px"}}>
+        <a target="_blank" href="https://www.linkedin.com/in/guilherme-rodrigues-cabral/">
+          <ContactIcon src={SvgLinkedin} />
         </a>
         <a target="_blank" href="https://github.com/GuiCabral74">
-          <img src={SvgGithub} />
+          <ContactIcon src={SvgGithub} />
         </a>
       </div>
-      <BtnResume>Baixar currículo</BtnResume>
+      <BtnResume href={Cv} download="Curriculo Guilherme">Baixar currículo</BtnResume>
     </div>
   );
 }

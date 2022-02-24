@@ -32,19 +32,28 @@ export const SubTitle = styled.h4`
   margin: 1.5rem 0 2rem;
 `
 
-export const BtnResume = styled.button`
+export const ContactIcon = styled.img`
+  margin-right: 24px;
+  transition: all .2s ease-in-out;
+  /* &:hover{
+    z-index: 999;
+    width: 50px;
+    margin: 0 24px -24px 0;
+    top: -10px;
+  } */
+`
+
+export const BtnResume = styled.a`
   background: #E0A80D;
-  width: 13.438rem;
-  height: 3.25rem;
-  border: none;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
+  text-decoration: none;
   line-height: 2.125rem;
   letter-spacing: 0.06em;
   color: #2D2E2E;
-  margin-top: 4.05rem;
+  padding: 24px;
 `
 
 /** NAV */

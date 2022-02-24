@@ -6,6 +6,7 @@ import Bootstrap from "./images/svgs/Bootstrap.svg";
 import Html from "./images/svgs/Html.svg";
 import Js from "./images/svgs/Js.svg";
 import Css from "./images/svgs/Css.svg";
+import StyledComp from "./images/svgs/Styled-comp.svg";
 
 const TechnologiesList = [
   {
@@ -47,6 +48,11 @@ const TechnologiesList = [
     src: Css,
     alt: "Css",
     name: "Css"
+  },
+  {
+    src: StyledComp,
+    alt: "StyledComponents",
+    name: "Styled Components"
   },
 ]
 
