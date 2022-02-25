@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "guilhermecabraldev"
-  }
+    "default": "guilhermecabraldev",
+    "staging": "guilhermecabraldev"
+  },
+  "targets": {}
 }

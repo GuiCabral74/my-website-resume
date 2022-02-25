@@ -1,17 +1,27 @@
 import {
   ContainerNav,
   MyName,
+  MenuMobile,
   NavList,
   ListItem,
   LinkNav,
 } from "./style/styles";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { useState } from "react";
 
 function Nav() {
+
+  const [toggle, setToggle] = useState (true);
+
+  function toggleMenu () {
+    setToggle(!toggle)
+    }
+
   return (
     <ContainerNav>
       <MyName>GUILHERME CABRAL</MyName>
-      <NavList>
+        <MenuMobile onClick={()=>toggleMenu()}>Menu</MenuMobile>
+      <NavList toggle={toggle}>
         <AnchorLink
           style={{ textDecoration: "none" }}
           offset="120"
