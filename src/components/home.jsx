@@ -1,25 +1,27 @@
-import { Title, SubTitle, ContactIcon, BtnResume } from "./style/styles";
-import SvgLinkedin from "./images/svgs/linkedin.svg";
-import SvgGithub from "./images/svgs/github.svg";
-import Cv from "./myResume/Guilherme Cabral.pdf"
+import { ContainerHome, Title, SubTitle, ContactIcon, BtnResume } from "./style/styles";
+import Cv from "./myResume/Guilherme Cabral.pdf";
+import ContactList from "./contactList";
 
 function home() {
   return (
-    <div id='home'>
+    <ContainerHome id="home">
       <Title>
         Olá, eu sou o<br /> Guilherme Cabral!
       </Title>
       <SubTitle>Desenvolvedor Front-End</SubTitle>
-      <div style={{"marginBottom":"64px"}}>
-        <a target="_blank" href="https://www.linkedin.com/in/guilherme-rodrigues-cabral/">
-          <ContactIcon src={SvgLinkedin} />
-        </a>
-        <a target="_blank" href="https://github.com/GuiCabral74">
-          <ContactIcon src={SvgGithub} />
-        </a>
+      <div style={{ marginBottom: "64px" }}>
+        {ContactList.map((contact, index) => {
+          return (
+            <a target="_blank" href={contact.href} alt={contact.alt} key={index}>
+              <ContactIcon src={contact.src} />
+            </a>
+          );
+        })}
       </div>
-      <BtnResume href={Cv} download="Curriculo Guilherme">Baixar currículo</BtnResume>
-    </div>
+      <BtnResume href={Cv} download="Curriculo Guilherme">
+        Baixar currículo
+      </BtnResume>
+    </ContainerHome>
   );
 }
 

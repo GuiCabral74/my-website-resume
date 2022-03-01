@@ -49,47 +49,88 @@ export const NavList = styled.ul`
   margin: 0 2rem;
   padding: 0;
 
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      color: #e0a80d;
+    }
+  }
+
+  li {
+    margin: 0 1rem;
+    font-weight: 400;
+  }
+
   @media (max-width: 800px) {
+    transition: .9s;
     display: ${(props) => (props.toggle ? "block" : "none")};
     position: absolute;
-    width: 100%;
     top: 87px;
-    right: -44px;
+    left: 455px;
     background: #2d2e2e;
-    font-size: 32px;
-    transition: 0.6s;
-    overflow-y: hidden;
-    visibility: ${(props) => (props.toggle ? "visible" : "hidden")};
     height: ${(props) => (props.toggle ? "100vh" : "0")};
-  }
-`;
+    font-size: 32px;
+    
+    a {
+      visibility: ${(props) => (props.toggle ? "visible" : "hidden")};
+      overflow-x: hidden;
 
-export const ListItem = styled.li`
-  margin: 0 1rem;
-  font-weight: 400;
+    }
 
-  @media (max-width: 800px) {
-    padding-bottom: 25px;
-    &::after {
-      content: "";
-      width: calc(100% - 32px);
-      height: 3px;
-      display: block;
-      background: #747575;
-      margin-top: 10px;
+    li {
+      padding-bottom: 25px;
+      padding: 1rem 0;
+      margin: 0 1rem;
+      &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        display: block;
+        background: #747575;
+        margin-top: 25px;
+      }
     }
   }
 `;
 
-export const LinkNav = styled.a`
-  text-decoration: none;
-  color: #fff;
-  &:hover {
-    color: #e0a80d;
-  }
-`;
+// export const ListItem = styled.li`
+//   margin: 0 1rem;
+//   font-weight: 400;
+
+//   @media (max-width: 800px) {
+//     padding-bottom: 25px;
+//     &::after {
+//       content: "";
+//       width: calc(100% - 32px);
+//       height: 3px;
+//       display: block;
+//       background: #747575;
+//       margin-top: 10px;
+//     }
+//   }
+// `;
+
+// export const LinkNav = styled.a`
+//   text-decoration: none;
+//   color: #fff;
+//   &:hover {
+//     color: #e0a80d;
+//   }
+// `;
 
 /** HOME */
+
+export const ContainerHome = styled.section`
+  height: calc(100vh - 87px);
+  //height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+
+`
 
 export const Title = styled.h1`
   font-size: 3rem;
@@ -128,11 +169,13 @@ export const BtnResume = styled.a`
   letter-spacing: 0.06em;
   color: #2d2e2e;
   padding: 24px;
+  width: 210px;
+  text-align: center;
 `;
 
 /** PROJECTS */
 
-export const ContainerProjects = styled.div`
+export const ContainerProjects = styled.section`
   width: 100%;
   margin-top: 14rem;
 `;
