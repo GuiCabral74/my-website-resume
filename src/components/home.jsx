@@ -13,7 +13,7 @@ function home() {
       <div style={{ marginBottom: "64px" }}>
         {ContactList.map((contact, index) => {
           return (
-            <a target="_blank" href={contact.href} alt={contact.alt} key={index}>
+            <a target="_blank" href={contact.href} rel="noreferrer noopener" alt={contact.alt} key={index}>
               <ContactIcon src={contact.src} />
             </a>
           );

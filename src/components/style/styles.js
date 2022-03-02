@@ -37,7 +37,7 @@ export const MenuMobile = styled.button`
   display: none;
   @media (max-width: 800px) {
     display: block;
-    margin-right: 32px;
+    margin-right: 2rem;
   }
 `;
 
@@ -65,69 +65,44 @@ export const NavList = styled.ul`
     transition: .9s;
     display: ${(props) => (props.toggle ? "block" : "none")};
     position: absolute;
-    top: 87px;
-    left: 455px;
+    top: 5.438rem;
+    left: 28.438rem;
     background: #2d2e2e;
     height: ${(props) => (props.toggle ? "100vh" : "0")};
-    font-size: 32px;
+    font-size: 2rem;
     
     a {
       visibility: ${(props) => (props.toggle ? "visible" : "hidden")};
       overflow-x: hidden;
-
     }
 
     li {
-      padding-bottom: 25px;
+      padding-bottom: 1.563rem;
       padding: 1rem 0;
       margin: 0 1rem;
       &::after {
         content: "";
         width: 100%;
-        height: 3px;
+        height: 0.188rem;
         display: block;
         background: #747575;
-        margin-top: 25px;
+        margin-top: 1.563rem;
       }
     }
   }
 `;
 
-// export const ListItem = styled.li`
-//   margin: 0 1rem;
-//   font-weight: 400;
-
-//   @media (max-width: 800px) {
-//     padding-bottom: 25px;
-//     &::after {
-//       content: "";
-//       width: calc(100% - 32px);
-//       height: 3px;
-//       display: block;
-//       background: #747575;
-//       margin-top: 10px;
-//     }
-//   }
-// `;
-
-// export const LinkNav = styled.a`
-//   text-decoration: none;
-//   color: #fff;
-//   &:hover {
-//     color: #e0a80d;
-//   }
-// `;
-
 /** HOME */
 
 export const ContainerHome = styled.section`
-  height: calc(100vh - 87px);
-  //height: 100vh;
+  height: calc(100vh - 5.438rem);
   display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
-
+  @media (max-width: 440px) {
+    margin-top: 3.125rem;
+  }
 `
 
 export const Title = styled.h1`
@@ -146,14 +121,11 @@ export const SubTitle = styled.h4`
 `;
 
 export const ContactIcon = styled.img`
-  margin-right: 24px;
-  transition: all 0.2s ease-in-out;
-  /* &:hover{
-    z-index: 999;
-    width: 50px;
-    margin: 0 24px -24px 0;
-    top: -10px;
-  } */
+  margin-right: 1.5rem;
+  transition: transform .2s;
+  &:hover{
+    transform: scale(1.5);
+  }
 `;
 
 export const BtnResume = styled.a`
@@ -166,12 +138,12 @@ export const BtnResume = styled.a`
   line-height: 2.125rem;
   letter-spacing: 0.06em;
   color: #2d2e2e;
-  padding: 20px;
-  width: 215px;
+  padding: 1.25rem;
+  width: 13.438rem;
   text-align: center;
   transition: box-shadow .3s;
   &:hover{
-    box-shadow: 0 4px 11px #747575;
+    box-shadow: 0 0.25rem 0.688rem #747575;
   }
 `;
 
@@ -189,9 +161,13 @@ export const ProjectTitle = styled.h2`
 `;
 
 export const DivProject = styled.div`
-  background: #fff;
+  background-image: url(${(props) =>(props.img)});
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #000;
   padding: 2rem 2rem;
+  margin-bottom: 1.25rem;
 `;
 
 export const ProjectName = styled.h2`
@@ -219,7 +195,7 @@ export const ContainerAbilities = styled.section`
   background: #3c3e3e;
   text-align: center;
   margin: 0  -2rem;
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
 `;
 
 export const TitleAbilities = styled.h1`
@@ -238,7 +214,7 @@ export const ContainerTechnologies = styled.div`
 export const Technology = styled.div`
   width: 13rem;
   background:linear-gradient(139.46deg, rgba(225, 225, 225, 0.6) 0%, rgba(225, 225, 225, 0.2) 99.22%);
-  border: 1px solid rgba(225, 225, 225, 0.2);
+  border: 0.063rem solid rgba(225, 225, 225, 0.2);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
   padding: 3rem 0;
   display: flex;
@@ -274,13 +250,13 @@ export const FooterContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
-  padding-bottom: 80px;
+  padding-bottom: 5rem;
 `
 
 export const Paragraph = styled.p`
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 1.625rem;
 `
 
 export const LinkLinkedin = styled.a`

@@ -6,7 +6,7 @@ function Contact() {
     <ContactContainer id="contact">
       {ContactList.map((i, index) => {
         return (
-          <a key={index} href={i.href} target="_blank">
+          <a key={index} href={i.href} target="_blank" rel="noreferrer noopener">
             <ContactIcon src={i.src} alt={i.alt} />
           </a>
         );
