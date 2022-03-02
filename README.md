@@ -40,7 +40,7 @@ The following tools were used in the construction of the project:
 - [ ] Responsivity.
 - [x] Anchor links in the singe page.
 - [x] Scroll smooth.
-- [ ] Button to download resume.
+- [x] Button to download resume.
 
  ##  Preview of Project
 
