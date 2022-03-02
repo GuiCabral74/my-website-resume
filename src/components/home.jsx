@@ -1,6 +1,7 @@
 import { ContainerHome, Title, SubTitle, ContactIcon, BtnResume } from "./style/styles";
 import Cv from "./myResume/Guilherme Cabral.pdf";
 import ContactList from "./contactList";
+import Typical from 'react-typical'
 
 function home() {
   return (
@@ -8,7 +9,7 @@ function home() {
       <Title>
         Olá, eu sou o<br /> Guilherme Cabral!
       </Title>
-      <SubTitle>Desenvolvedor Front-End</SubTitle>
+      <SubTitle><Typical steps={['Desenvolvedor Front-End', 1000]}/> </SubTitle>
       <div style={{ marginBottom: "64px" }}>
         {ContactList.map((contact, index) => {
           return (
