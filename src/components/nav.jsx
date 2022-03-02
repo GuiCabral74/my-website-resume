@@ -1,11 +1,4 @@
-import {
-  ContainerNav,
-  MyName,
-  MenuMobile,
-  NavList,
-  ListItem,
-  LinkNav,
-} from "./style/styles";
+import { ContainerNav, MyName, MenuMobile, NavList } from "./style/styles";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useState } from "react";
 
@@ -46,6 +39,15 @@ function Nav() {
         >
           <a>
             <li>Habilidades</li>
+          </a>
+        </AnchorLink>
+        <AnchorLink
+          style={{ textDecoration: "none" }}
+          offset="120"
+          href="#contact"
+        >
+          <a>
+            <li>Contato</li>
           </a>
         </AnchorLink>
       </NavList>

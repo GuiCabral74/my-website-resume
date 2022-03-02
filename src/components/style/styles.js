@@ -6,7 +6,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    padding-bottom: 7.5rem;
     box-sizing: border-box;
     background: #2D2E2E;
     font-family: 'Source Code Pro', monospace;
@@ -48,7 +47,6 @@ export const NavList = styled.ul`
   list-style: none;
   margin: 0 2rem;
   padding: 0;
-
 
   a {
     text-decoration: none;
@@ -168,9 +166,13 @@ export const BtnResume = styled.a`
   line-height: 2.125rem;
   letter-spacing: 0.06em;
   color: #2d2e2e;
-  padding: 24px;
-  width: 210px;
+  padding: 20px;
+  width: 215px;
   text-align: center;
+  transition: box-shadow .3s;
+  &:hover{
+    box-shadow: 0 4px 11px #747575;
+  }
 `;
 
 /** PROJECTS */
@@ -216,7 +218,8 @@ export const SeeProject = styled.a`
 export const ContainerAbilities = styled.section`
   background: #3c3e3e;
   text-align: center;
-  margin: 0 -2rem;
+  margin: 0  -2rem;
+  padding-bottom: 40px;
 `;
 
 export const TitleAbilities = styled.h1`
@@ -234,13 +237,18 @@ export const ContainerTechnologies = styled.div`
 
 export const Technology = styled.div`
   width: 13rem;
-  background: rgba(255, 255, 255, 0.04);
+  background:linear-gradient(139.46deg, rgba(225, 225, 225, 0.6) 0%, rgba(225, 225, 225, 0.2) 99.22%);
+  border: 1px solid rgba(225, 225, 225, 0.2);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 0 1.375rem 2.5rem;
+  &:hover{
+    box-shadow: 4px 4px 8px rgba(14, 14, 14, 0.25);
+  }
 `;
 
 export const TechnologyName = styled.p`
@@ -249,3 +257,32 @@ export const TechnologyName = styled.p`
   font-weight: 600;
   text-transform: uppercase;
 `;
+
+/**CONTACT */
+
+export const ContactContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7.75rem;
+`
+
+/**FOOTER */
+
+export const FooterContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  padding-bottom: 80px;
+`
+
+export const Paragraph = styled.p`
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26px;
+`
+
+export const LinkLinkedin = styled.a`
+  color: #fff;
+`

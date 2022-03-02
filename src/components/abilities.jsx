@@ -1,8 +1,4 @@
-import {
-  ContainerAbilities,
-  TitleAbilities,
-  ContainerTechnologies
-} from "./style/styles";
+import { ContainerAbilities, TitleAbilities, ContainerTechnologies } from "./style/styles";
 import CardTechnology from "./cardTechnology";
 import TechnologiesList from "./technologiesList";
 
