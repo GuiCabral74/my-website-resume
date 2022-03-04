@@ -24,6 +24,8 @@ Here i made a project to apresent my resume for world.
 In this project i used:
 
 * [Create React App](https://github.com/facebook/create-react-app) to start the project.
+* [React Typical](https://www.npmjs.com/package/react-typical) to make the animation of typing.
+* [React Anchor Link Smooth Scroll](https://www.npmjs.com/package/react-anchor-link-smooth-scroll) for the smooth scroll in the menu.
 
 
 ## 🛠 Technologies
@@ -32,6 +34,8 @@ The following tools were used in the construction of the project:
 
 - [React](https://pt-br.reactjs.org/)
 - [Styled Components](https://styled-components.com/)
+- [React Typical](https://www.npmjs.com/package/react-typical)
+- [React Anchor Link Smooth Scroll](https://www.npmjs.com/package/react-anchor-link-smooth-scroll)
 
 
 ### Features
