@@ -3,10 +3,13 @@ import { createGlobalStyle } from "styled-components";
 
 /** GLOBAL STYLES */
 export const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+  }
+  body {
     background: #2D2E2E;
     font-family: 'Source Code Pro', monospace;
     color: #fff;
@@ -17,14 +20,15 @@ export const GlobalStyle = createGlobalStyle`
 /** NAV */
 
 export const ContainerNav = styled.nav`
-  padding-top: 2rem;
+  padding: 2rem 0;
   margin: 0 -2rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-size: 1.125rem;
   position: fixed;
   top: 0;
-  height: 3.438rem;
+  height: 5.5rem;
   width: 100vw;
   background: #2d2e2e;
 `;
@@ -109,7 +113,7 @@ export const Title = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   line-height: 4.188rem;
-  margin-top: 7.063rem;
+  margin: 7.063rem 0 1.5rem;
 `;
 
 export const SubTitle = styled.h4`
@@ -117,7 +121,7 @@ export const SubTitle = styled.h4`
   font-size: 2rem;
   font-weight: normal;
   line-height: 2.125rem;
-  margin: 1.5rem 0 2rem;
+  margin-bottom: 2rem;
 `;
 
 export const ContactIcon = styled.img`
@@ -138,12 +142,15 @@ export const BtnResume = styled.a`
   line-height: 2.125rem;
   letter-spacing: 0.06em;
   color: #2d2e2e;
-  padding: 1.25rem;
+  padding: 0.563rem 0;
   width: 13.438rem;
   text-align: center;
   transition: box-shadow .3s;
+  border: 0.188rem solid;
   &:hover{
-    box-shadow: 0 0.25rem 0.688rem #747575;
+    color: #fff;
+    background: none;
+    border: 0.188rem solid #fff;
   }
 `;
 
@@ -152,23 +159,31 @@ export const BtnResume = styled.a`
 export const ContainerProjects = styled.section`
   width: 100%;
   margin-top: 14rem;
+  color: #fff;
 `;
 
 export const ProjectTitle = styled.h2`
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 4rem;
 `;
 
 export const DivProject = styled.div`
-  background-image: url(${(props) =>(props.img)});
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #000;
+  background: rgba(255, 255, 255, 0.04);
+  //width: auto;
   padding: 2rem 2rem;
   margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-evenly;
+  :nth-child(odd){
+    flex-direction: row-reverse;
+  }
 `;
+
+export const DivInfos = styled.div`
+  width: 43.813rem;
+`
 
 export const ProjectName = styled.h2`
   font-size: 2.5rem;
@@ -181,21 +196,50 @@ export const ProjectDescription = styled.p`
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
   margin: 1rem 0 3rem;
-  color: #2d2e2e;
 `;
 
 export const SeeProject = styled.a`
   font-size: 1.125rem;
   font-weight: 700;
+  border: 0.188rem solid #fff;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.563rem 1.5rem;
+  &:hover {
+    color: #e0a80d;
+    border-color: #e0a80d;
+  }
 `;
+
+export const SeeCode = styled.a`
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 3.25rem;
+  &:hover {
+    color: #e0a80d;
+  }
+`
+
+export const DivImg = styled.div`
+  width: 22.938rem;
+  height: 18.625rem;
+`
+
+export const ProjectImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`
 
 /** Abilities */
 
 export const ContainerAbilities = styled.section`
-  background: #3c3e3e;
   text-align: center;
-  margin: 0  -2rem;
-  padding-bottom: 2.5rem;
+  margin: 7.75rem -2rem 0;
 `;
 
 export const TitleAbilities = styled.h1`
@@ -206,15 +250,14 @@ export const TitleAbilities = styled.h1`
 
 export const ContainerTechnologies = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  flex-shrink: 0;
 `;
 
 export const Technology = styled.div`
   width: 13rem;
-  background:linear-gradient(139.46deg, rgba(225, 225, 225, 0.6) 0%, rgba(225, 225, 225, 0.2) 99.22%);
-  border: 0.063rem solid rgba(225, 225, 225, 0.2);
+  background:linear-gradient(139.46deg, rgba(109, 111, 111, 0.6) 0%, rgba(109, 111, 111, 0.2) 99.22%);
+  border: 0.063rem solid rgba(109, 111, 111, 0.2);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
   padding: 3rem 0;
   display: flex;
@@ -222,8 +265,10 @@ export const Technology = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 1.375rem 2.5rem;
+  transition: transform .2s;
   &:hover{
     box-shadow: 4px 4px 8px rgba(14, 14, 14, 0.25);
+    transform: scale(1.1);
   }
 `;
 
@@ -240,7 +285,7 @@ export const ContactContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7.75rem;
+  margin-top: 10.25rem;
 `
 
 /**FOOTER */
