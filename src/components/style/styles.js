@@ -61,6 +61,7 @@ export const Hamburger = styled.span`
   display: block;
   border-top: 2px solid;
   width: 20px;
+  color: #fff;
   &:after , :before {
     content: "";
     display: block;
@@ -68,6 +69,19 @@ export const Hamburger = styled.span`
     height: 2px;
     background: currentColor;
     margin-top: 5px;
+    transition: .3s;
+    position: ${(props) => (props.burguer ? "relative" : "static")};
+  }
+  @media (max-width: 800px) {
+    //background: ${(props) => (props.burguer ? "red" : "blue")};
+    border-top-color: ${(props) => (props.burguer ?"transparent" : "currentColor")};
+    :before {
+      transform: rotate(${(props) => (props.burguer ? "135deg" : "0")});
+    }
+    :after {
+      transform: rotate(${(props) => (props.burguer ? "-135deg" : "0")});
+      top: -7px;
+    }
   }
 `
 

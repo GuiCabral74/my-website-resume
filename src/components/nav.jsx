@@ -4,17 +4,22 @@ import { useState } from "react";
 
 function Nav() {
   const [toggle, setToggle] = useState(true);
+  const [burguer, setBurguer] = useState(false);
 
   function toggleMenu() {
     setToggle(!toggle);
+  }
+
+  function toggleBurguer() {
+    setBurguer(!burguer);
   }
 
   return (
     <Header>
       <MyName>GUILHERME CABRAL</MyName>
       <NavContainer >
-      <BtnMobile onClick={() => toggleMenu()}>Menu
-        <Hamburger></Hamburger>
+      <BtnMobile onClick={() => {{toggleMenu()} {toggleBurguer()}}}>
+        <Hamburger burguer={burguer}></Hamburger>
       </BtnMobile>
         <Menu toggle={toggle}>
           <AnchorLink
