@@ -1,4 +1,4 @@
-import { ContainerNav, MyName, MenuMobile, NavList } from "./style/styles";
+import { Header, MyName, NavContainer, BtnMobile, Hamburger, Menu } from "./style/styles";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useState } from "react";
 
@@ -10,48 +10,44 @@ function Nav() {
   }
 
   return (
-    <ContainerNav>
+    <Header>
       <MyName>GUILHERME CABRAL</MyName>
-      <MenuMobile onClick={() => toggleMenu()}>Menu</MenuMobile>
-      <NavList toggle={toggle}>
-        <AnchorLink
-          style={{ textDecoration: "none" }}
-          offset="120"
-          href="#home"
-        >
-          <a>
+      <NavContainer >
+      <BtnMobile onClick={() => toggleMenu()}>Menu
+        <Hamburger></Hamburger>
+      </BtnMobile>
+        <Menu toggle={toggle}>
+          <AnchorLink
+            style={{ textDecoration: "none" }}
+            offset="120"
+            href="#home"
+          >
             <li>Apresentação</li>
-          </a>
-        </AnchorLink>
-        <AnchorLink
-          style={{ textDecoration: "none" }}
-          offset="120"
-          href="#projects"
-        >
-          <a>
+          </AnchorLink>
+          <AnchorLink
+            style={{ textDecoration: "none" }}
+            offset="120"
+            href="#projects"
+          >
             <li>Projetos</li>
-          </a>
-        </AnchorLink>
-        <AnchorLink
-          style={{ textDecoration: "none" }}
-          offset="120"
-          href="#abilities"
-        >
-          <a>
+          </AnchorLink>
+          <AnchorLink
+            style={{ textDecoration: "none" }}
+            offset="120"
+            href="#abilities"
+          >
             <li>Habilidades</li>
-          </a>
-        </AnchorLink>
-        <AnchorLink
-          style={{ textDecoration: "none" }}
-          offset="120"
-          href="#contact"
-        >
-          <a>
+          </AnchorLink>
+          <AnchorLink
+            style={{ textDecoration: "none" }}
+            offset="120"
+            href="#contact"
+          >
             <li>Contato</li>
-          </a>
-        </AnchorLink>
-      </NavList>
-    </ContainerNav>
+          </AnchorLink>
+        </Menu>
+      </NavContainer>
+    </Header>
   );
 }
 

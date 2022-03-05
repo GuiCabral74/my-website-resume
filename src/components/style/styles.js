@@ -19,40 +19,69 @@ export const GlobalStyle = createGlobalStyle`
 
 /** NAV */
 
-export const ContainerNav = styled.nav`
-  padding: 2rem 0;
-  margin: 0 -2rem;
+export const Header = styled.header`
+  height: 5.5rem;
+  padding: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 -2rem;
   font-size: 1.125rem;
   position: fixed;
   top: 0;
-  height: 5.5rem;
   width: 100vw;
   background: #2d2e2e;
 `;
 
 export const MyName = styled.span`
   font-weight: 500;
-  margin: 0 2rem;
 `;
-export const MenuMobile = styled.button`
+
+export const NavContainer = styled.nav`
+  @media (max-width: 800px) {
+  background: #2d2e2e;
+    
+}
+`
+export const BtnMobile = styled.button`
   display: none;
   @media (max-width: 800px) {
-    display: block;
-    margin-right: 2rem;
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+
   }
 `;
 
-export const NavList = styled.ul`
+export const Hamburger = styled.span`
+  display: block;
+  border-top: 2px solid;
+  width: 20px;
+  &:after , :before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+  }
+`
+
+
+export const Menu = styled.ul`
   display: flex;
-  justify-content: space-between;
   list-style: none;
-  margin: 0 2rem;
+  gap: 1rem;
+  justify-content: space-between;
   padding: 0;
 
   a {
+    display: block;
+    padding: .5rem;
     text-decoration: none;
     color: #fff;
     &:hover {
@@ -61,37 +90,39 @@ export const NavList = styled.ul`
   }
 
   li {
-    margin: 0 1rem;
     font-weight: 400;
   }
 
   @media (max-width: 800px) {
-    transition: .9s;
-    display: ${(props) => (props.toggle ? "block" : "none")};
-    position: absolute;
-    top: 5.438rem;
-    left: 28.438rem;
-    background: #2d2e2e;
-    height: ${(props) => (props.toggle ? "100vh" : "0")};
+    margin: 0;
     font-size: 2rem;
-    
-    a {
-      visibility: ${(props) => (props.toggle ? "visible" : "hidden")};
-      overflow-x: hidden;
-    }
+    display: block;
+    position: absolute;
+    width: ${(props) => (props.toggle ? "0" : "100vw")};
+    top: 5.438rem;
+    right: 0;
+    background: #2d2e2e;
+    transition: .6s;
+    z-index: 1000;
+    height: 100vh;
+    visibility: ${(props) => (props.toggle ? "hidden" : "visible")};
+    overflow-x: hidden;
 
     li {
       padding-bottom: 1.563rem;
       padding: 1rem 0;
-      margin: 0 1rem;
-      &::after {
+      margin-top: 39px;
+      text-align: center;
+
+
+      /* &::after {
         content: "";
         width: 100%;
         height: 0.188rem;
         display: block;
         background: #747575;
         margin-top: 1.563rem;
-      }
+      } */
     }
   }
 `;
@@ -105,15 +136,20 @@ export const ContainerHome = styled.section`
   align-items: left;
   flex-direction: column;
   @media (max-width: 440px) {
-    margin-top: 3.125rem;
+    text-align: center;
   }
-`
+`;
 
 export const Title = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   line-height: 4.188rem;
   margin: 7.063rem 0 1.5rem;
+  @media (max-width: 440px) {
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 4rem;
+  }
 `;
 
 export const SubTitle = styled.h4`
@@ -122,13 +158,33 @@ export const SubTitle = styled.h4`
   font-weight: normal;
   line-height: 2.125rem;
   margin-bottom: 2rem;
+  @media (max-width: 800px) {
+    p {
+      &::after {
+        visibility: hidden;
+      }
+    }
+  }
+  @media (max-width: 440px) {
+    font-size: 18px;
+  }
+`;
+
+export const DivImgContact = styled.div`
+  margin-bottom: 64px;
+  @media (max-width: 440px) {
+    margin-bottom: 48px;
+  }
 `;
 
 export const ContactIcon = styled.img`
   margin-right: 1.5rem;
-  transition: transform .2s;
-  &:hover{
+  transition: transform 0.2s;
+  &:hover {
     transform: scale(1.5);
+  }
+  @media (max-width: 440px) {
+    margin: 0 12px;
   }
 `;
 
@@ -145,12 +201,17 @@ export const BtnResume = styled.a`
   padding: 0.563rem 0;
   width: 13.438rem;
   text-align: center;
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
   border: 0.188rem solid;
-  &:hover{
+  border-color: transparent;
+  &:hover {
     color: #fff;
     background: none;
     border: 0.188rem solid #fff;
+  }
+  @media (max-width: 440px) {
+    width: 288px;
+    margin: 0 auto;
   }
 `;
 
@@ -176,14 +237,14 @@ export const DivProject = styled.div`
   margin-bottom: 1.25rem;
   display: flex;
   justify-content: space-evenly;
-  :nth-child(odd){
+  :nth-child(odd) {
     flex-direction: row-reverse;
   }
 `;
 
 export const DivInfos = styled.div`
   width: 43.813rem;
-`
+`;
 
 export const ProjectName = styled.h2`
   font-size: 2.5rem;
@@ -222,18 +283,18 @@ export const SeeCode = styled.a`
   &:hover {
     color: #e0a80d;
   }
-`
+`;
 
 export const DivImg = styled.div`
   width: 22.938rem;
   height: 18.625rem;
-`
+`;
 
 export const ProjectImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-`
+`;
 
 /** Abilities */
 
@@ -256,7 +317,11 @@ export const ContainerTechnologies = styled.div`
 
 export const Technology = styled.div`
   width: 13rem;
-  background:linear-gradient(139.46deg, rgba(109, 111, 111, 0.6) 0%, rgba(109, 111, 111, 0.2) 99.22%);
+  background: linear-gradient(
+    139.46deg,
+    rgba(109, 111, 111, 0.6) 0%,
+    rgba(109, 111, 111, 0.2) 99.22%
+  );
   border: 0.063rem solid rgba(109, 111, 111, 0.2);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.05);
   padding: 3rem 0;
@@ -265,8 +330,8 @@ export const Technology = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 1.375rem 2.5rem;
-  transition: transform .2s;
-  &:hover{
+  transition: transform 0.2s;
+  &:hover {
     box-shadow: 4px 4px 8px rgba(14, 14, 14, 0.25);
     transform: scale(1.1);
   }
@@ -286,7 +351,7 @@ export const ContactContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin-top: 10.25rem;
-`
+`;
 
 /**FOOTER */
 
@@ -296,14 +361,14 @@ export const FooterContainer = styled.section`
   align-items: center;
   margin-top: 5rem;
   padding-bottom: 5rem;
-`
+`;
 
 export const Paragraph = styled.p`
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.625rem;
-`
+`;
 
 export const LinkLinkedin = styled.a`
   color: #fff;
-`
+`;
