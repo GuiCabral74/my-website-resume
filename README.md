@@ -40,8 +40,8 @@ The following tools were used in the construction of the project:
 
 ### Features
 
-- [ ] Add preview and link of my projects.
-- [ ] Responsivity.
+- [x] Add preview and link of my projects.
+- [x] Responsivity.
 - [x] Anchor links in the singe page.
 - [x] Scroll smooth.
 - [x] Button to download resume.
