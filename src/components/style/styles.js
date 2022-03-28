@@ -39,21 +39,19 @@ export const MyName = styled.span`
 
 export const NavContainer = styled.nav`
   @media (max-width: 800px) {
-  background: #2d2e2e;
-    
-}
-`
+    background: #2d2e2e;
+  }
+`;
 export const BtnMobile = styled.button`
   display: none;
   @media (max-width: 800px) {
     display: flex;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
     background: none;
     cursor: pointer;
-    gap: .5rem;
-
+    gap: 0.5rem;
   }
 `;
 
@@ -62,19 +60,20 @@ export const Hamburger = styled.span`
   border-top: 2px solid;
   width: 20px;
   color: #fff;
-  &:after , :before {
+  &:after,
+  :before {
     content: "";
     display: block;
     width: 20px;
     height: 2px;
     background: currentColor;
     margin-top: 5px;
-    transition: .3s;
+    transition: 0.3s;
     position: ${(props) => (props.burguer ? "relative" : "static")};
   }
   @media (max-width: 800px) {
-    //background: ${(props) => (props.burguer ? "red" : "blue")};
-    border-top-color: ${(props) => (props.burguer ?"transparent" : "currentColor")};
+    border-top-color: ${(props) =>
+      props.burguer ? "transparent" : "currentColor"};
     :before {
       transform: rotate(${(props) => (props.burguer ? "135deg" : "0")});
     }
@@ -83,8 +82,7 @@ export const Hamburger = styled.span`
       top: -7px;
     }
   }
-`
-
+`;
 
 export const Menu = styled.ul`
   display: flex;
@@ -95,7 +93,7 @@ export const Menu = styled.ul`
 
   a {
     display: block;
-    padding: .5rem;
+    padding: 0.5rem;
     text-decoration: none;
     color: #fff;
     &:hover {
@@ -116,7 +114,7 @@ export const Menu = styled.ul`
     top: 5.438rem;
     right: 0;
     background: #2d2e2e;
-    transition: .6s;
+    transition: 0.6s;
     z-index: 1000;
     height: 100vh;
     visibility: ${(props) => (props.toggle ? "hidden" : "visible")};
@@ -127,7 +125,6 @@ export const Menu = styled.ul`
       padding: 1rem 0;
       margin-top: 39px;
       text-align: center;
-
 
       /* &::after {
         content: "";
@@ -258,6 +255,10 @@ export const DivProject = styled.div`
 
 export const DivInfos = styled.div`
   width: 43.813rem;
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const ProjectName = styled.h2`
@@ -285,6 +286,9 @@ export const SeeProject = styled.a`
     color: #e0a80d;
     border-color: #e0a80d;
   }
+  @media (max-width: 480px) {
+    text-align: center;
+  }
 `;
 
 export const SeeCode = styled.a`
@@ -297,11 +301,18 @@ export const SeeCode = styled.a`
   &:hover {
     color: #e0a80d;
   }
+  @media (max-width: 480px) {
+    margin: 15px 0 0;
+    text-align: center;
+  }
 `;
 
 export const DivImg = styled.div`
   width: 22.938rem;
   height: 18.625rem;
+  @media (max-width: 642px) {
+    display: none;
+  }
 `;
 
 export const ProjectImg = styled.img`
