@@ -241,6 +241,22 @@ export const ProjectTitle = styled.h2`
   margin-bottom: 4rem;
 `;
 
+export const ConstructionDiv = styled.div`
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10% 0;
+`
+
+export const InConstruction = styled.h2`
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+`
+
+export const Quote = styled.blockquote`
+  text-align: center;
+  margin-top: 5%;
+`
+
 export const DivProject = styled.div`
   background: rgba(255, 255, 255, 0.04);
   //width: auto;
@@ -325,7 +341,7 @@ export const ProjectImg = styled.img`
 
 export const ContainerAbilities = styled.section`
   text-align: center;
-  margin: 7.75rem -2rem 0;
+  //margin: 7.75rem -2rem 0;
 `;
 
 export const TitleAbilities = styled.h1`

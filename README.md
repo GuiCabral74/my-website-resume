@@ -19,7 +19,7 @@ Table of Contents
 
 ## About project
 
-Here i made a project to apresent my resume for world.
+Here i made a project to present my resume for world.
 
 In this project i used:
 
@@ -41,7 +41,7 @@ The following tools were used in the construction of the project:
 ### Features
 
 - [x] Add preview and link of my projects.
-- [x] Responsivity.
+- [x] Responsive.
 - [x] Anchor links in the singe page.
 - [x] Scroll smooth.
 - [x] Button to download resume.
@@ -50,7 +50,7 @@ The following tools were used in the construction of the project:
 
 
 <div align="center">
-  <img alt="FinalExample" title="#FinalExample" src="CAMINHO DA IMAGEM" />
+  <img alt="FinalExample" title="#FinalExample" src="src/components/images/projects-img/projectExample.GIF" />
 </div>
 
 

@@ -7,6 +7,9 @@ import Html from "./images/svgs/Html.svg";
 import Js from "./images/svgs/Js.svg";
 import Css from "./images/svgs/Css.svg";
 import StyledComp from "./images/svgs/Styled-comp.svg";
+import Typescript from "./images/svgs/Typescript.svg";
+import Angular from "./images/svgs/Angular.svg";
+import Python from "./images/svgs/Python.svg";
 
 const TechnologiesList = [
   {
@@ -53,6 +56,21 @@ const TechnologiesList = [
     src: StyledComp,
     alt: "StyledComponents",
     name: "Styled Components"
+  },
+  {
+    src: Typescript,
+    alt: "Typescript",
+    name: "Typescript"
+  },
+  {
+    src: Angular,
+    alt: "Angular",
+    name: "Angular"
+  },
+  {
+    src: Python,
+    alt: "Python",
+    name: "Python"
   },
 ]
 
